@@ -3,18 +3,90 @@ using System.Collections.Generic;
 using UnityEngine;
 using System; 
 
-public class a_GenerateNorthAmerica : MonoBehaviour {
+public class f_Oceania : MonoBehaviour {
 
 	public GameObject continent_group;
 	public TextAsset data_file;
 	private int numberOfObjects;
 
+	private GameObject oceaniaParent;
+
 	void Start () {
 
 		Load (data_file); // Using CSV data dragged into the Inspector
-		numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornNorthAm) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
-		StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
-		print ("2015 North American Immigrants " + (Convert.ToInt32(Find_Year("2015").BornNorthAm) / 10000)); // Check if these values match with CSV
+	}
+
+	void Update(){
+
+		if (Input.GetKeyDown (KeyCode.A)) { // 2015
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornOceania) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
+			StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
+			print ("2015 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2015").BornOceania) / 10000) + " * 10,000"); // Check if these values match with CSV 
+		} 
+		else if (Input.GetKeyDown (KeyCode.B)){ // 2014
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2014").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2014 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2014").BornOceania) / 10000) + " * 10,000");
+		}
+		else if (Input.GetKeyDown (KeyCode.C)){ // 2013
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2013").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2013 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2013").BornOceania) / 10000) + " * 10,000");
+		}
+		else if (Input.GetKeyDown (KeyCode.D)){ // 2012
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2012").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2012 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2012").BornOceania) / 10000) + " * 10,000");
+		}
+		else if (Input.GetKeyDown (KeyCode.E)){ // 2011
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2011").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2011 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2011").BornOceania) / 10000) + " * 10,000");
+		}
+		else if (Input.GetKeyDown (KeyCode.F)){ // 2010
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2010").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2010 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2010").BornOceania) / 10000) + " * 10,000");
+		}
+		else if (Input.GetKeyDown (KeyCode.G)){ // 2009
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2009").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2009 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2009").BornOceania) / 10000) + " * 10,000");
+		}
+		else if (Input.GetKeyDown (KeyCode.H)){ // 2008
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2008").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2008 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2008").BornOceania) / 10000) + " * 10,000");
+		}
+		else if (Input.GetKeyDown (KeyCode.I)){ // 2007
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2007").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2007 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2007").BornOceania) / 10000) + " * 10,000");
+		}
+		else if (Input.GetKeyDown (KeyCode.J)){ // 2006
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2006").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2006 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2006").BornOceania) / 10000) + " * 10,000");
+		}
+		else if (Input.GetKeyDown (KeyCode.K)){ // 2005
+			Destroy (oceaniaParent);
+			numberOfObjects = Convert.ToInt32 (Find_Year ("2005").BornOceania) / 10000;
+			StartCoroutine ("generateSpheres"); 
+			print ("2005 Oceania Immigrants: " + (Convert.ToInt32 (Find_Year ("2005").BornOceania) / 10000) + " * 10,000");
+		}
+		else {
+			// Nothing's happening
+		}
 	}
 
 	public class Row
@@ -183,13 +255,14 @@ public class a_GenerateNorthAmerica : MonoBehaviour {
 
 	IEnumerator  generateSpheres () {
 
+		oceaniaParent = new GameObject();
+
 		for (int i = 0; i < numberOfObjects; i++) {
-			Vector3 position = UnityEngine.Random.onUnitSphere * 2.0f; // Change this value depending on how large the unit circle should be
-			Instantiate (continent_group, position, Quaternion.identity);
-			yield return new WaitForSeconds (0.05f);
-		}
-		if (numberOfObjects == numberOfObjects) {
-			print ("2015 North America Complete " + Time.time);
+
+			Vector3 position = UnityEngine.Random.onUnitSphere * 4.0f; // Change this value depending on how large the unit circle should be
+			GameObject go = Instantiate (continent_group, position, Quaternion.identity) as GameObject;
+			go.transform.SetParent(oceaniaParent.transform);
+			yield return new WaitForSeconds (0.02f);
 		}
 	}
 }
