@@ -259,7 +259,7 @@ public class a_NorthAmerica : MonoBehaviour {
 
 		for (int i = 0; i < numberOfObjects; i++) {
 			
-			Vector3 position = UnityEngine.Random.onUnitSphere * 2.0f; // Change this value depending on how large the unit circle should be
+			Vector3 position = UnityEngine.Random.onUnitSphere * 2.8f; // Change this value depending on how large the unit circle should be
 			GameObject go = Instantiate (continent_group, position, Quaternion.identity) as GameObject;
 			go.transform.SetParent(northAmericaParent.transform);
 			yield return new WaitForSeconds (0.01f);
