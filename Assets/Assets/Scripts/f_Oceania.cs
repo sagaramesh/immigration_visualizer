@@ -9,7 +9,7 @@ public class f_Oceania : MonoBehaviour {
 	public TextAsset data_file;
 	private int numberOfObjects;
 
-	private GameObject oceaniaParent;
+	public static GameObject oceaniaParent;
 
 	void Start () {
 

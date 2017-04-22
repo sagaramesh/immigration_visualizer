@@ -9,7 +9,7 @@ public class a_NorthAmerica : MonoBehaviour {
 	public TextAsset data_file;
 	private int numberOfObjects;
 
-	private GameObject northAmericaParent;
+	public static GameObject northAmericaParent;
 
 	void Start () {
 
