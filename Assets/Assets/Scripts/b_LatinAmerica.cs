@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System; 
+using System;
+using NewtonVR; 
 
 public class b_LatinAmerica : MonoBehaviour {
 
-	public GameObject continent_group;
-	public TextAsset data_file;
-	private int numberOfObjects;
+    public GameObject continent_group;
+    public TextAsset data_file;
+    public NVRButton Button;
+    public int buttonYear;
+    private int numberOfObjects;
 
-	public static GameObject latinAmericaParent;
+    public static GameObject latinAmericaParent;
 
 	void Start () {
 
@@ -18,68 +21,77 @@ public class b_LatinAmerica : MonoBehaviour {
 
 	void Update(){
 
-		if (Input.GetKeyDown (KeyCode.A)) { // 2015
+		if (Button.ButtonDown && buttonYear == 2015) { // 2015
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornLatinAm) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
 			StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
 			print ("2015 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2015").BornLatinAm) / 10000) + " * 10,000"); // Check if these values match with CSV 
 		} 
-		else if (Input.GetKeyDown (KeyCode.B)){ // 2014
+		else if (Button.ButtonDown && buttonYear == 2014)
+        { // 2014
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2014").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2014 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2014").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.C)){ // 2013
+		else if (Button.ButtonDown && buttonYear == 2013)
+        { // 2013
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2013").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2013 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2013").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.D)){ // 2012
+		else if (Button.ButtonDown && buttonYear == 2012)
+        { // 2012
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2012").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2012 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2012").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.E)){ // 2011
+		else if (Button.ButtonDown && buttonYear == 2011)
+        { // 2011
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2011").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2011 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2011").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.F)){ // 2010
+		else if (Button.ButtonDown && buttonYear == 2010)
+        { // 2010
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2010").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2010 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2010").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.G)){ // 2009
+		else if (Button.ButtonDown && buttonYear == 2009)
+        { // 2009
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2009").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2009 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2009").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.H)){ // 2008
+		else if (Button.ButtonDown && buttonYear == 2008)
+        { // 2008
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2008").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2008 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2008").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.I)){ // 2007
+		else if (Button.ButtonDown && buttonYear == 2007)
+        { // 2007
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2007").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2007 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2007").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.J)){ // 2006
-			Destroy (latinAmericaParent);
-			numberOfObjects = Convert.ToInt32 (Find_Year ("2006").BornLatinAm) / 10000;
+		else if (Button.ButtonDown && buttonYear == 2006) { 
+
+            numberOfObjects = Convert.ToInt32 (Find_Year ("2006").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2006 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2006").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.K)){ // 2005
-			Destroy (latinAmericaParent);
+		else if (Button.ButtonDown && buttonYear == 2005){ // 2005
+
+            Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2005").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2005 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2005").BornLatinAm) / 10000) + " * 10,000");

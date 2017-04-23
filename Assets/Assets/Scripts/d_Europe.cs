@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System; 
+using System;
+using NewtonVR;
 
 public class d_Europe : MonoBehaviour {
 
-	public GameObject continent_group;
-	public TextAsset data_file;
-	private int numberOfObjects;
+    public GameObject continent_group;
+    public TextAsset data_file;
+    public NVRButton Button;
+    public int buttonYear;
+    private int numberOfObjects;
 
-	public static GameObject europeParent;
+    public static GameObject europeParent;
 
 	void Start () {
 
