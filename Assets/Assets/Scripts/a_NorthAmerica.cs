@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using NewtonVR;
 
@@ -9,7 +10,10 @@ public class a_NorthAmerica : MonoBehaviour {
 	public GameObject continent_group;
 	public TextAsset data_file;
     public NVRButton Button;
-    public int buttonYear;
+	public Text yearText;
+	public Text continentText;
+    
+	public int buttonYear;
 	private int numberOfObjects;
 
 	public static GameObject northAmericaParent;
@@ -17,15 +21,20 @@ public class a_NorthAmerica : MonoBehaviour {
 	void Start () {
 
 		Load (data_file); // Using CSV data dragged into the Inspector
+		yearText.text = "";
+		continentText.text = "";
 	}
 
 	void Update(){
 
-		if (Button.ButtonDown && buttonYear == 2015) { // 2015
+		if (Button.ButtonDown && buttonYear == 2015 || Input.GetKey(KeyCode.Space)) { // 2015
 			Destroy (northAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornNorthAm) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
 			StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
 			print ("2015 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2015").BornNorthAm) / 10000) + " * 10,000"); // Check if these values match with CSV 
+
+			continentText.text = Find_Year ("2015").BornNorthAm;
+			yearText.text = "In 2015";
 		} 
 		else if (Button.ButtonDown && buttonYear == 2014)
         { // 2014
