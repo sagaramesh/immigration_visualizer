@@ -21,67 +21,67 @@ public class e_Asia : MonoBehaviour {
 
 	void Update(){
 
-		if (Input.GetKeyDown (KeyCode.A)) { // 2015
+		if (Button.ButtonDown && buttonYear == 2015) { // 2015
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornAsia) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
 			StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
 			print ("2015 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2015").BornAsia) / 10000) + " * 10,000"); // Check if these values match with CSV 
 		} 
-		else if (Input.GetKeyDown (KeyCode.B)){ // 2014
+		else if (Button.ButtonDown && buttonYear == 2014){ // 2014
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2014").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2014 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2014").BornAsia) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.C)){ // 2013
+		else if (Button.ButtonDown && buttonYear == 2013){ // 2013
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2013").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2013 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2013").BornAsia) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.D)){ // 2012
+		else if (Button.ButtonDown && buttonYear == 2012){ // 2012
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2012").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2012 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2012").BornAsia) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.E)){ // 2011
+		else if (Button.ButtonDown && buttonYear == 2011){ // 2011
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2011").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2011 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2011").BornAsia) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.F)){ // 2010
+		else if (Button.ButtonDown && buttonYear == 2010){ // 2010
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2010").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2010 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2010").BornAsia) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.G)){ // 2009
+		else if (Button.ButtonDown && buttonYear == 2009){ // 2009
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2009").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2009 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2009").BornAsia) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.H)){ // 2008
+		else if (Button.ButtonDown && buttonYear == 2008){ // 2008
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2008").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2008 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2008").BornAsia) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.I)){ // 2007
+		else if (Button.ButtonDown && buttonYear == 2007){ // 2007
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2007").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2007 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2007").BornAsia) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.J)){ // 2006
+		else if (Button.ButtonDown && buttonYear == 2006){ // 2006
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2006").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2006 Asian Immigrants: " + (Convert.ToInt32 (Find_Year ("2006").BornAsia) / 10000) + " * 10,000");
 		}
-		else if (Input.GetKeyDown (KeyCode.K)){ // 2005
+		else if (Button.ButtonDown && buttonYear == 2005){ // 2005
 			Destroy (asiaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2005").BornAsia) / 10000;
 			StartCoroutine ("generateSpheres"); 
