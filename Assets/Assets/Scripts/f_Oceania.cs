@@ -7,6 +7,7 @@ using NewtonVR;
 public class f_Oceania : MonoBehaviour {
 
     public GameObject continent_group;
+    public GameObject intro;
     public TextAsset data_file;
     public NVRButton Button;
     public int buttonYear;
