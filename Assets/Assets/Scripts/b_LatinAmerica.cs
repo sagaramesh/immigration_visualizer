@@ -22,6 +22,7 @@ public class b_LatinAmerica : MonoBehaviour {
 	void Update(){
 
 		if (Button.ButtonDown && buttonYear == 2015) { // 2015
+
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornLatinAm) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
 			StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
@@ -83,8 +84,9 @@ public class b_LatinAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2007 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2007").BornLatinAm) / 10000) + " * 10,000");
 		}
-		else if (Button.ButtonDown && buttonYear == 2006) { 
+		else if (Button.ButtonDown && buttonYear == 2006) {
 
+            Destroy(latinAmericaParent);
             numberOfObjects = Convert.ToInt32 (Find_Year ("2006").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2006 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2006").BornLatinAm) / 10000) + " * 10,000");

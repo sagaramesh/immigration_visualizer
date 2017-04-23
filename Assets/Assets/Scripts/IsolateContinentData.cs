@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NewtonVR;
 
 public class IsolateContinentData : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public NVRButton Button;
+    public int continentNumber;
+
+    // Use this for initialization
+    void Start () {
 		GameObject scriptContainer = GameObject.Find("ScriptContainer"); 
 		a_NorthAmerica a = scriptContainer.GetComponent<a_NorthAmerica>();
 		b_LatinAmerica b = scriptContainer.GetComponent<b_LatinAmerica>();
@@ -16,25 +20,31 @@ public class IsolateContinentData : MonoBehaviour {
 	}
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.Alpha1)) {
-			IsolateNorthAmerica ();
-		} 
-		else if(Input.GetKeyDown (KeyCode.Alpha2)){
-			IsolateLatinAmerica ();
-		}
-		else if(Input.GetKeyDown (KeyCode.Alpha3)){
+		if (Button.ButtonDown && continentNumber == 1) {
 			IsolateAfrica ();
-		}
-		else if(Input.GetKeyDown (KeyCode.Alpha4)){
+		} 
+		else if(Button.ButtonDown && continentNumber == 2)
+        {
 			IsolateEurope ();
 		}
-		else if(Input.GetKeyDown (KeyCode.Alpha5)){
+		else if(Button.ButtonDown && continentNumber == 3)
+        {
 			IsolateAsia ();
 		}
-		else if(Input.GetKeyDown (KeyCode.Alpha6)){
+		else if(Button.ButtonDown && continentNumber == 4)
+        {
+			IsolateLatinAmerica ();
+		}
+		else if(Button.ButtonDown && continentNumber == 5)
+        {
 			IsolateOceania ();
 		}
-		else if(Input.GetKeyDown (KeyCode.Alpha7)){
+		else if(Button.ButtonDown && continentNumber == 6)
+        {
+			IsolateNorthAmerica ();
+		}
+		else if(Button.ButtonDown && continentNumber == 7)
+        {
 			IsolateNothing ();
 		}
 		else {
