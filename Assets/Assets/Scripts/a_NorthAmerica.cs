@@ -11,8 +11,6 @@ public class a_NorthAmerica : MonoBehaviour {
     public GameObject intro; 
 	public TextAsset data_file;
     public NVRButton Button;
-	public Text yearText;
-	public Text continentText;
     
 	public int buttonYear;
 	private int numberOfObjects;
@@ -47,8 +45,6 @@ public class a_NorthAmerica : MonoBehaviour {
     void Start () {
 
 		Load (data_file); // Using CSV data dragged into the Inspector
-		yearText.text = "";
-		continentText.text = "";
 	}
 
 	void Update(){
@@ -61,9 +57,6 @@ public class a_NorthAmerica : MonoBehaviour {
             intro.SetActive(false);
 
             color2015(); 
-
-			continentText.text = Find_Year ("2015").BornNorthAm;
-			yearText.text = "In 2015";
         } 
 		else if (Button.ButtonDown && buttonYear == 2014)
         { // 2014
