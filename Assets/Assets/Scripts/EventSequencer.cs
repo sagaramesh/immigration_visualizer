@@ -66,56 +66,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2015 && regionSelected == 7 || yearSelected == 2015 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2015 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2015 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2015 && regionSelected == 7 || yearSelected == 2015 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2015 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2015 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2015 && regionSelected == 7 || yearSelected == 2015 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2015 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2015 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2015 && regionSelected == 7 || yearSelected == 2015 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2015 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2015 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2015 && regionSelected == 7 || yearSelected == 2015 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2015 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2015 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2015 && regionSelected == 7 || yearSelected == 2015 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2015 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2015 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -123,56 +171,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2014 && regionSelected == 7 || yearSelected == 2014 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2014 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2014 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2014 && regionSelected == 7 || yearSelected == 2014 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2014 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2014 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2014 && regionSelected == 7 || yearSelected == 2014 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2014 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2014 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2014 && regionSelected == 7 || yearSelected == 2014 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2014 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2014 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2014 && regionSelected == 7 || yearSelected == 2014 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2014 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2014 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2014 && regionSelected == 7 || yearSelected == 2014 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2014 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2014 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -180,56 +276,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2013 && regionSelected == 7 || yearSelected == 2013 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2013 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2013 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2013 && regionSelected == 7 || yearSelected == 2013 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2013 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2013 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2013 && regionSelected == 7 || yearSelected == 2013 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2013 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2013 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2013 && regionSelected == 7 || yearSelected == 2013 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2013 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2013 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2013 && regionSelected == 7 || yearSelected == 2013 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2013 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2013 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2013 && regionSelected == 7 || yearSelected == 2013 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2013 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2013 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -237,56 +381,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2012 && regionSelected == 7 || yearSelected == 2012 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2012 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2012 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2012 && regionSelected == 7 || yearSelected == 2012 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2012 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2012 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2012 && regionSelected == 7 || yearSelected == 2012 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2012 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2012 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2012 && regionSelected == 7 || yearSelected == 2012 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2012 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2012 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2012 && regionSelected == 7 || yearSelected == 2012 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2012 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2012 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2012 && regionSelected == 7 || yearSelected == 2012 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2012 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2012 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -294,56 +486,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2011 && regionSelected == 7 || yearSelected == 2011 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2011 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2011 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2011 && regionSelected == 7 || yearSelected == 2011 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2011 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2011 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2011 && regionSelected == 7 || yearSelected == 2011 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2011 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2011 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2011 && regionSelected == 7 || yearSelected == 2011 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2011 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2011 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2011 && regionSelected == 7 || yearSelected == 2011 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2011 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2011 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2011 && regionSelected == 7 || yearSelected == 2011 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2011 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2011 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -351,56 +591,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2010 && regionSelected == 7 || yearSelected == 2010 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2010 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2010 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2010 && regionSelected == 7 || yearSelected == 2010 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2010 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2010 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2010 && regionSelected == 7 || yearSelected == 2010 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2010 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2010 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2010 && regionSelected == 7 || yearSelected == 2010 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2010 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2010 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2010 && regionSelected == 7 || yearSelected == 2010 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2010 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2010 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2010 && regionSelected == 7 || yearSelected == 2010 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2010 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2010 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -408,56 +696,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2009 && regionSelected == 7 || yearSelected == 2009 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2009 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2009 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2009 && regionSelected == 7 || yearSelected == 2009 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2009 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2009 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2009 && regionSelected == 7 || yearSelected == 2009 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2009 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2009 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2009 && regionSelected == 7 || yearSelected == 2009 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2009 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2009 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2009 && regionSelected == 7 || yearSelected == 2009 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2009 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2009 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2009 && regionSelected == 7 || yearSelected == 2009 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2009 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2009 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -465,56 +801,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2008 && regionSelected == 7 || yearSelected == 2008 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2008 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2008 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2008 && regionSelected == 7 || yearSelected == 2008 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2008 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2008 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2008 && regionSelected == 7 || yearSelected == 2008 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2008 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2008 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2008 && regionSelected == 7 || yearSelected == 2008 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2008 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2008 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2008 && regionSelected == 7 || yearSelected == 2008 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2008 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2008 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2008 && regionSelected == 7 || yearSelected == 2008 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2008 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2008 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -522,56 +906,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2007 && regionSelected == 7 || yearSelected == 2007 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2007 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2007 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2007 && regionSelected == 7 || yearSelected == 2007 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2007 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2007 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2007 && regionSelected == 7 || yearSelected == 2007 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2007 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2007 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2007 && regionSelected == 7 || yearSelected == 2007 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2007 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2007 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2007 && regionSelected == 7 || yearSelected == 2007 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2007 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2007 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2007 && regionSelected == 7 || yearSelected == 2007 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2007 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2007 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -579,56 +1011,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2006 && regionSelected == 7 || yearSelected == 2006 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2006 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2006 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2006 && regionSelected == 7 || yearSelected == 2006 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2006 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2006 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2006 && regionSelected == 7 || yearSelected == 2006 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2006 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2006 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2006 && regionSelected == 7 || yearSelected == 2006 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2006 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2006 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2006 && regionSelected == 7 || yearSelected == 2006 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2006 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2006 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2006 && regionSelected == 7 || yearSelected == 2006 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2006 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2006 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 
@@ -636,56 +1116,104 @@ public class EventSequencer : MonoBehaviour {
 
 		// NORTH AMERICA
 
-		if (yearSelected == 2005 && regionSelected == 7 || yearSelected == 2005 && regionSelected == 6) {
-			a_NorthAmerica.northAmericaParent.SetActive (true);
+		if (yearSelected == 2005 && regionSelected == 7) {
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			//a_NorthAmerica.northAmericaParent.SetActive (false);
+		else if (yearSelected == 2005 && regionSelected == 6){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
+			b_LatinAmerica.latinAmericaParent.SetActive (false);
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// LATIN AMERICA
 
-		if (yearSelected == 2005 && regionSelected == 7 || yearSelected == 2005 && regionSelected == 4) {
-			b_LatinAmerica.latinAmericaParent.SetActive (true);
+		if (yearSelected == 2005 && regionSelected == 7) {
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			b_LatinAmerica.latinAmericaParent.SetActive (false);
+		else if (yearSelected == 2005 && regionSelected == 4){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (true); // Set active, disable others
+			c_Africa.africaParent.SetActive (false);
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// AFRICA
 
-		if (yearSelected == 2005 && regionSelected == 7 || yearSelected == 2005 && regionSelected == 1) {
-			c_Africa.africaParent.SetActive (true);
+		if (yearSelected == 2005 && regionSelected == 7) {
+			c_Africa.africaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			c_Africa.africaParent.SetActive (false);
+		else if (yearSelected == 2005 && regionSelected == 1){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (true); // Set active, disable others
+			d_Europe.europeParent.SetActive (false);
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// EUROPE
 
-		if (yearSelected == 2005 && regionSelected == 7 || yearSelected == 2005 && regionSelected == 2) {
-			d_Europe.europeParent.SetActive (true);
+		if (yearSelected == 2005 && regionSelected == 7) {
+			d_Europe.europeParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			d_Europe.europeParent.SetActive (false);
+		else if (yearSelected == 2005 && regionSelected == 2){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (true); // Set active, disable others
+			e_Asia.asiaParent.SetActive (false);
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// ASIA
 
-		if (yearSelected == 2005 && regionSelected == 7 || yearSelected == 2005 && regionSelected == 3) {
-			e_Asia.asiaParent.SetActive (true);
+		if (yearSelected == 2005 && regionSelected == 7) {
+			e_Asia.asiaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			e_Asia.asiaParent.SetActive (false);
+		else if (yearSelected == 2005 && regionSelected == 3){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (true); // Set active, disable others
+			f_Oceania.oceaniaParent.SetActive (false);
+		}
+		else {	
+			// No selected year
 		}
 
 		// OCEANIA
 
-		if (yearSelected == 2005 && regionSelected == 7 || yearSelected == 2005 && regionSelected == 5) {
-			f_Oceania.oceaniaParent.SetActive (true);
+		if (yearSelected == 2005 && regionSelected == 7) {
+			f_Oceania.oceaniaParent.SetActive (true); // Change region that's set active here
 		} 
-		else {
-			f_Oceania.oceaniaParent.SetActive (false);
+		else if (yearSelected == 2005 && regionSelected == 5){ // Change value of region selected
+			a_NorthAmerica.northAmericaParent.SetActive (false); 
+			b_LatinAmerica.latinAmericaParent.SetActive (false); 
+			c_Africa.africaParent.SetActive (false); 
+			d_Europe.europeParent.SetActive (false); 
+			e_Asia.asiaParent.SetActive (false); 
+			f_Oceania.oceaniaParent.SetActive (true); // Set active, disable others
+		}
+		else {	
+			// No selected year
 		}
 	}
 }
