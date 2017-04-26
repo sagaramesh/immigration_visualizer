@@ -15,6 +15,7 @@ public class EventSequencer : MonoBehaviour {
 	// Show All - 7
 
 	public static EventSequencer Instance;
+
 	public int yearSelected;
 	public int regionSelected;
 
