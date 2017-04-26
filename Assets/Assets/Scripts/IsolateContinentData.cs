@@ -27,6 +27,7 @@ public class IsolateContinentData : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		GameObject scriptContainer = GameObject.Find("ScriptContainer"); 
+
 		a_NorthAmerica a = scriptContainer.GetComponent<a_NorthAmerica>();
 		b_LatinAmerica b = scriptContainer.GetComponent<b_LatinAmerica>();
 		c_Africa c = scriptContainer.GetComponent<c_Africa>();
@@ -37,7 +38,8 @@ public class IsolateContinentData : MonoBehaviour {
 	void Update () {
 
 		if (Button.ButtonDown && continentNumber == 1) {
-			IsolateAfrica ();
+			//IsolateAfrica ();
+			EventSequencer.Instance.regionSelected = 1;
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -55,7 +57,8 @@ public class IsolateContinentData : MonoBehaviour {
         } 
 		else if(Button.ButtonDown && continentNumber == 2)
         {
-			IsolateEurope (); // 169 235
+			//IsolateEurope ();
+			EventSequencer.Instance.regionSelected = 2;
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -73,7 +76,8 @@ public class IsolateContinentData : MonoBehaviour {
         }
 		else if(Button.ButtonDown && continentNumber == 3)
         {
-			IsolateAsia ();
+			//IsolateAsia ();
+			EventSequencer.Instance.regionSelected = 3;
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -91,7 +95,8 @@ public class IsolateContinentData : MonoBehaviour {
         }
 		else if(Button.ButtonDown && continentNumber == 4)
         {
-			IsolateLatinAmerica ();
+			//IsolateLatinAmerica ();
+			EventSequencer.Instance.regionSelected = 4;
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(77, 211, 255, 255); // Modify
@@ -109,7 +114,8 @@ public class IsolateContinentData : MonoBehaviour {
         }
 		else if(Button.ButtonDown && continentNumber == 5)
         {
-			IsolateOceania ();
+			//IsolateOceania ();
+			EventSequencer.Instance.regionSelected = 5;
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -127,7 +133,8 @@ public class IsolateContinentData : MonoBehaviour {
         }
 		else if(Button.ButtonDown && continentNumber == 6)
         {
-			IsolateNorthAmerica ();
+			//IsolateNorthAmerica ();
+			EventSequencer.Instance.regionSelected = 6;
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(241, 255, 0, 255); // Modify
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -145,7 +152,8 @@ public class IsolateContinentData : MonoBehaviour {
         }
 		else if(Button.ButtonDown && continentNumber == 7)
         {
-			IsolateNothing ();
+			//IsolateNothing ();
+			EventSequencer.Instance.regionSelected = 7;
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -165,6 +173,8 @@ public class IsolateContinentData : MonoBehaviour {
 			print ("Nothing isolated");
 		}
 	}
+
+	/*
 
 	public void IsolateNorthAmerica(){
 
@@ -233,5 +243,5 @@ public class IsolateContinentData : MonoBehaviour {
 		d_Europe.europeParent.SetActive (true);
 		e_Asia.asiaParent.SetActive (true);
         f_Oceania.oceaniaParent.SetActive(true);
-    }
+    } */
 }

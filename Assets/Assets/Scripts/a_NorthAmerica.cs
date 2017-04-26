@@ -45,6 +45,7 @@ public class a_NorthAmerica : MonoBehaviour {
     void Start () {
 
 		Load (data_file); // Using CSV data dragged into the Inspector
+
 	}
 
 	void Update(){
@@ -54,9 +55,9 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornNorthAm) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
 			StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
 			print ("2015 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2015").BornNorthAm) / 10000) + " * 10,000"); // Check if these values match with CSV 
-            intro.SetActive(false);
-
+            intro.SetActive(false); // Set the intor message to inactive when you hit any year 
             color2015(); 
+			EventSequencer.Instance.yearSelected = 2015;
         } 
 		else if (Button.ButtonDown && buttonYear == 2014)
         { // 2014
@@ -65,8 +66,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2014 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2014").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2014();
+			EventSequencer.Instance.yearSelected = 2014;
         }
 		else if (Button.ButtonDown && buttonYear == 2013)
         { // 2013
@@ -75,8 +76,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2013 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2013").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2013();
+			EventSequencer.Instance.yearSelected = 2013;
         }
 		else if (Button.ButtonDown && buttonYear == 2012)
         { // 2012
@@ -85,8 +86,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2012 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2012").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2012();
+			EventSequencer.Instance.yearSelected = 2012;
         }
 		else if (Button.ButtonDown && buttonYear == 2011)
         { // 2011
@@ -95,8 +96,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2011 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2011").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2011();
+			EventSequencer.Instance.yearSelected = 2011;
         }
 		else if (Button.ButtonDown && buttonYear == 2010)
         { // 2010
@@ -105,8 +106,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2010 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2010").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2010();
+			EventSequencer.Instance.yearSelected = 2010;
         }
 		else if (Button.ButtonDown && buttonYear == 2009)
         { // 2009
@@ -115,8 +116,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2009 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2009").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2009();
+			EventSequencer.Instance.yearSelected = 2009;
         }
 		else if (Button.ButtonDown && buttonYear == 2008)
         { // 2008
@@ -125,8 +126,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2008 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2008").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2008();
+			EventSequencer.Instance.yearSelected = 2008;
         }
 		else if (Button.ButtonDown && buttonYear == 2007)
         { // 2007
@@ -135,8 +136,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2007 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2007").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2007();
+			EventSequencer.Instance.yearSelected = 2007;
         }
 		else if (Button.ButtonDown && buttonYear == 2006)
         { // 2006
@@ -145,8 +146,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2006 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2006").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2006();
+			EventSequencer.Instance.yearSelected = 2006;
         }
 		else if (Button.ButtonDown && buttonYear == 2005){ // If the button is down, and 2005 is typed in the Inspector, generate 2005 North American data
 			Destroy (northAmericaParent);
@@ -154,8 +155,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			StartCoroutine ("generateSpheres"); 
 			print ("2005 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2005").BornNorthAm) / 10000) + " * 10,000");
             intro.SetActive(false);
-
             color2005();
+			EventSequencer.Instance.yearSelected = 2005;
         }
 		else {
 			// Nothing's happening

@@ -26,66 +26,88 @@ public class c_Africa : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornAfrica) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
 			StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
 			print ("2015 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2015").BornAfrica) / 10000) + " * 10,000"); // Check if these values match with CSV 
+
+			EventSequencer.Instance.yearSelected = 2015;
 		} 
 		else if (Button.ButtonDown && buttonYear == 2014){ // 2014
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2014").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2014 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2014").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2014;
 		}
 		else if (Button.ButtonDown && buttonYear == 2013){ // 2013
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2013").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2013 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2013").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2013;
 		}
 		else if (Button.ButtonDown && buttonYear == 2012){ // 2012
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2012").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2012 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2012").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2012;
 		}
 		else if (Button.ButtonDown && buttonYear == 2011){ // 2011
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2011").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2011 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2011").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2011;
 		}
 		else if (Button.ButtonDown && buttonYear == 2010){ // 2010
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2010").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2010 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2010").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2010;
 		}
 		else if (Button.ButtonDown && buttonYear == 2009){ // 2009
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2009").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2009 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2009").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2009;
 		}
 		else if (Button.ButtonDown && buttonYear == 2008){ // 2008
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2008").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2008 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2008").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2008;
 		}
 		else if (Button.ButtonDown && buttonYear == 2007){ // 2007
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2007").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2007 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2007").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2007;
 		}
 		else if (Button.ButtonDown && buttonYear == 2006){ // 2006
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2006").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2006 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2006").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2006;
 		}
 		else if (Button.ButtonDown && buttonYear == 2005){ // 2005
 			Destroy (africaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2005").BornAfrica) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2005 African Immigrants: " + (Convert.ToInt32 (Find_Year ("2005").BornAfrica) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2005;
 		}
 		else {
 			// Nothing's happening

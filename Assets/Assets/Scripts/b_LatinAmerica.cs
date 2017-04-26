@@ -26,7 +26,9 @@ public class b_LatinAmerica : MonoBehaviour {
 			Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornLatinAm) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
 			StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
-			print ("2015 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2015").BornLatinAm) / 10000) + " * 10,000"); // Check if these values match with CSV 
+			print ("2015 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2015").BornLatinAm) / 10000) + " * 10,000"); // Check if these values match with CSV
+
+			EventSequencer.Instance.yearSelected = 2015;
 		} 
 		else if (Button.ButtonDown && buttonYear == 2014)
         { // 2014
@@ -34,6 +36,8 @@ public class b_LatinAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2014").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2014 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2014").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2014;
 		}
 		else if (Button.ButtonDown && buttonYear == 2013)
         { // 2013
@@ -41,6 +45,8 @@ public class b_LatinAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2013").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2013 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2013").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2013;
 		}
 		else if (Button.ButtonDown && buttonYear == 2012)
         { // 2012
@@ -48,6 +54,8 @@ public class b_LatinAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2012").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2012 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2012").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2012;
 		}
 		else if (Button.ButtonDown && buttonYear == 2011)
         { // 2011
@@ -55,6 +63,8 @@ public class b_LatinAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2011").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2011 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2011").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2011;
 		}
 		else if (Button.ButtonDown && buttonYear == 2010)
         { // 2010
@@ -62,6 +72,8 @@ public class b_LatinAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2010").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2010 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2010").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2010;
 		}
 		else if (Button.ButtonDown && buttonYear == 2009)
         { // 2009
@@ -69,6 +81,8 @@ public class b_LatinAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2009").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2009 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2009").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2009;
 		}
 		else if (Button.ButtonDown && buttonYear == 2008)
         { // 2008
@@ -76,6 +90,8 @@ public class b_LatinAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2008").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2008 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2008").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2008;
 		}
 		else if (Button.ButtonDown && buttonYear == 2007)
         { // 2007
@@ -83,6 +99,8 @@ public class b_LatinAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2007").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2007 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2007").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2007;
 		}
 		else if (Button.ButtonDown && buttonYear == 2006) {
 
@@ -90,13 +108,17 @@ public class b_LatinAmerica : MonoBehaviour {
             numberOfObjects = Convert.ToInt32 (Find_Year ("2006").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2006 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2006").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2006;
 		}
-		else if (Button.ButtonDown && buttonYear == 2005){ // 2005
+		else if (Button.ButtonDown && buttonYear == 2005){
 
             Destroy (latinAmericaParent);
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2005").BornLatinAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2005 Latin American Immigrants: " + (Convert.ToInt32 (Find_Year ("2005").BornLatinAm) / 10000) + " * 10,000");
+
+			EventSequencer.Instance.yearSelected = 2005;
 		}
 		else {
 			// Nothing's happening
