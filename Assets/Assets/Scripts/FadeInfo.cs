@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NewtonVR;
 
-public class ActivateSphere : MonoBehaviour {
+public class FadeInfo : MonoBehaviour {
 	
 	public NVRButton Button;
 
@@ -29,22 +29,28 @@ public class ActivateSphere : MonoBehaviour {
 
 	void Update() {
 
-		// INFO AND EXIT LABEL CONDITIONS
+        // INFO AND EXIT LABEL CONDITIONS
 
-		if (infolabelnumber == 1) {
-			info_label.SetActive (true);
-		} else if (infolabelnumber == 2) {
-			info_label.SetActive (false);
-		} else {
-			info_label.SetActive (false);
-		}
-		if (exitlabelnumber == 1) {
+        if (infolabelnumber == 1 && Button.transform.localPosition.y == 0)
+        {
+            info_label.SetActive(true);
+        }
+        else if (infolabelnumber != 1 && Button.transform.localPosition.y == 0)
+        {
+            info_label.SetActive(false);
+        }
+        else {
+        }
+
+
+		if (exitlabelnumber == 1 && Button.transform.localPosition.y == 0) {
 			exit_label.SetActive (true);
-		} else if (exitlabelnumber == 2) {
-			exit_label.SetActive (false);
-		} else {
+		}
+        else if (exitlabelnumber != 1 && Button.transform.localPosition.y == 0) {
 			exit_label.SetActive (false);
 		}
+        else{
+        }
 
 		// BUTTON CONDITIONS
 
@@ -56,6 +62,7 @@ public class ActivateSphere : MonoBehaviour {
 			infolabelnumber = 2;
 			exitlabelnumber = 1;
 		}
+        /*
 		if(Button.ButtonDown && exitlabelnumber == 1 || Input.GetKeyDown(KeyCode.F)) // Info and sphere at zero opacity
 		{
 			StartCoroutine(InfoFader(0.0f, 1.0f));
@@ -64,6 +71,7 @@ public class ActivateSphere : MonoBehaviour {
 			infolabelnumber = 1;
 			exitlabelnumber = 2;
 		}
+        */
 	}
 
 	IEnumerator SphereFader(float sphere_aValue, float sphere_aTime)
@@ -78,19 +86,18 @@ public class ActivateSphere : MonoBehaviour {
 		}
 	}
 
-	IEnumerator InfoFader(float info_aValue, float info_aTime)
-	{
-		info_message.SetActive (true);
+    IEnumerator InfoFader(float info_aValue, float info_aTime)
+    {
+        info_message.SetActive(true);
 
-		float info_alpha = info_message.GetComponent<SpriteRenderer>().material.color.a; 
+        float info_alpha = info_message.GetComponent<SpriteRenderer>().material.color.a;
 
-		for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / info_aTime)
-		{
-			Color newColor = new Color(1, 1, 1, Mathf.Lerp(info_alpha,info_aValue,t));
-			info_message.GetComponent<SpriteRenderer>().material.color = newColor;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / info_aTime)
+        {
+            Color newColor = new Color(1, 1, 1, Mathf.Lerp(info_alpha, info_aValue, t));
+            info_message.GetComponent<SpriteRenderer>().material.color = newColor;
 
-			yield return new WaitForEndOfFrame ();
-		}
-	}
-
+            yield return new WaitForEndOfFrame();
+        }
+    }
 }
