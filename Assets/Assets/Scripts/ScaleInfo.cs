@@ -56,7 +56,7 @@ public class ScaleInfo : MonoBehaviour {
 
     IEnumerator ActivateInfoLabel()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         info_label.SetActive(true);
         exit_label.SetActive(false);
 
@@ -65,7 +65,7 @@ public class ScaleInfo : MonoBehaviour {
 
     IEnumerator ActivateExitLabel()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         info_label.SetActive(false);
         exit_label.SetActive(true);
 
