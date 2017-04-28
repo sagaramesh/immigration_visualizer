@@ -19,8 +19,32 @@ public class EventSequencer : MonoBehaviour {
 	public int yearSelected;
 	public int regionSelected;
 
-	// Use this for initialization
-	void Awake(){
+    public GameObject label2015;
+    public GameObject label2014;
+    public GameObject label2013;
+    public GameObject label2012;
+    public GameObject label2011;
+    public GameObject label2010;
+    public GameObject label2009;
+    public GameObject label2008;
+    public GameObject label2007;
+    public GameObject label2006;
+    public GameObject label2005;
+
+    public GameObject bottom2015;
+    public GameObject bottom2014;
+    public GameObject bottom2013;
+    public GameObject bottom2012;
+    public GameObject bottom2011;
+    public GameObject bottom2010;
+    public GameObject bottom2009;
+    public GameObject bottom2008;
+    public GameObject bottom2007;
+    public GameObject bottom2006;
+    public GameObject bottom2005;
+
+    // Use this for initialization
+    void Awake(){
 		Instance = this;
 	}
 
@@ -46,6 +70,8 @@ public class EventSequencer : MonoBehaviour {
 		print ("Year selected " + yearSelected);
 		print ("Region selected " + regionSelected);
 
+        ColorYears();
+
 		Year2005 ();
 		Year2006 ();
 		Year2007 ();
@@ -60,10 +86,155 @@ public class EventSequencer : MonoBehaviour {
 
 	}
 
-	// For each year's data, two main cases for each region. Either the year has been hit with show all selected, 
-	// or the year has been hit with one of the regions selected. Cover all bases for every year with this in mind.
+    // For each year's data, two main cases for each region. Either the year has been hit with show all selected, 
+    // or the year has been hit with one of the regions selected. Cover all bases for every year with this in mind.
 
-	void Year2015 () {
+
+    void ColorYears() {
+
+        // 2015
+
+        if (yearSelected == 2015) {
+            label2015.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else {
+            label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2014
+
+        if (yearSelected == 2014)
+        {
+            label2014.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2013
+
+        if (yearSelected == 2013)
+        {
+            label2013.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2012
+
+        if (yearSelected == 2012)
+        {
+            label2012.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2011
+
+        if (yearSelected == 2011)
+        {
+            label2011.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2010
+
+        if (yearSelected == 2010)
+        {
+            label2010.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2009
+
+        if (yearSelected == 2009)
+        {
+            label2009.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2008
+
+        if (yearSelected == 2008)
+        {
+            label2008.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2007
+
+        if (yearSelected == 2007)
+        {
+            label2007.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2006
+
+        if (yearSelected == 2006)
+        {
+            label2006.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        }
+
+        // 2005
+
+        if (yearSelected == 2005)
+        {
+            label2005.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+            bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+        }
+        else
+        {
+            label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+            bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+        } 
+    }
+
+    void Year2015 () {
 
 		// NORTH AMERICA
 
