@@ -4,6 +4,8 @@ using System.Collections;
 public class ActivateRegions : MonoBehaviour {
 
 	public GameObject regionsPanel;
+
+    private BoxCollider childColliders;
 	private Vector3 regionsFinalPosition = new Vector3 (1.306f, 1.048f, -0.017f);
 	//private Vector3 regionsFinalScale = new Vector3 (1f, 1f, 1f);
 	private float smoothFactor = 2f;
@@ -20,4 +22,6 @@ public class ActivateRegions : MonoBehaviour {
 		//transform.localScale = Vector3.Lerp (transform.localScale, regionsFinalScale, Time.deltaTime * smoothFactor + 0.2f);
 
 	}
+
+    // TODO: Figure out a way to disbale box colliders before regionsFinalPosition
 }
