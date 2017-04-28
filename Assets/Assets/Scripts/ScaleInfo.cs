@@ -8,7 +8,6 @@ public class ScaleInfo : MonoBehaviour {
 	public NVRButton Button;
 
 	public GameObject info_message;
-
 	public GameObject info_label;
 	public GameObject exit_label;
 
@@ -93,5 +92,4 @@ public class ScaleInfo : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
     }
-
 }
