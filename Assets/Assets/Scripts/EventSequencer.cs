@@ -16,6 +16,9 @@ public class EventSequencer : MonoBehaviour {
 
 	public static EventSequencer Instance;
 
+    private int startYear = 0;
+    private int startRegion = 7;
+
 	public int yearSelected;
 	public int regionSelected;
 
@@ -50,8 +53,8 @@ public class EventSequencer : MonoBehaviour {
 
 	void Start () {
 
-		yearSelected = 0;
-		regionSelected = 7;
+		yearSelected = startYear;
+		regionSelected = startRegion;
 
 		GameObject scriptContainer = GameObject.Find("ScriptContainer"); 
 

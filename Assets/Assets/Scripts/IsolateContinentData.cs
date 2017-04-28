@@ -28,12 +28,14 @@ public class IsolateContinentData : MonoBehaviour {
     void Start () {
 		GameObject scriptContainer = GameObject.Find("ScriptContainer"); 
 
-		a_NorthAmerica a = scriptContainer.GetComponent<a_NorthAmerica>();
+
+
+		/*a_NorthAmerica a = scriptContainer.GetComponent<a_NorthAmerica>();
 		b_LatinAmerica b = scriptContainer.GetComponent<b_LatinAmerica>();
 		c_Africa c = scriptContainer.GetComponent<c_Africa>();
 		d_Europe d = scriptContainer.GetComponent<d_Europe>();
 		e_Asia e = scriptContainer.GetComponent<e_Asia>();
-		f_Oceania f = scriptContainer.GetComponent<f_Oceania>();
+		f_Oceania f = scriptContainer.GetComponent<f_Oceania>();*/
 	}
 	void Update () {
 
@@ -170,8 +172,8 @@ public class IsolateContinentData : MonoBehaviour {
             oceaniaBottom.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
         }
 		else {
-			print ("Nothing isolated");
-		}
+            print("Nothing isolated");
+        }
 	}
 
 	/*

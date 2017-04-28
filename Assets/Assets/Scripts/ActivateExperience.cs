@@ -34,7 +34,10 @@ public class ActivateExperience : MonoBehaviour {
 
 		if (Button.ButtonDown || Input.GetKeyDown (KeyCode.S)) {
 
-			yearsPanel.GetComponent<ActivateYears> ().enabled = true;
+            EventSequencer.Instance.yearSelected = 0;
+            EventSequencer.Instance.regionSelected = 7;
+
+            yearsPanel.GetComponent<ActivateYears> ().enabled = true;
 			regionsPanel.GetComponent<ActivateRegions> ().enabled = true;
 			infoButton.GetComponent<ActivateInfo> ().enabled = true;
 			world_map.GetComponent<ActivateMap> ().enabled = true;
@@ -86,7 +89,7 @@ public class ActivateExperience : MonoBehaviour {
 
 	IEnumerator DeactivateIntro(){
 
-		yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1);
 		intro_message.SetActive(false);
 		ok_button.SetActive (false);
 

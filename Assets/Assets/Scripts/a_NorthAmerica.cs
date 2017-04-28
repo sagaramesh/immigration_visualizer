@@ -17,31 +17,6 @@ public class a_NorthAmerica : MonoBehaviour {
 
 	public static GameObject northAmericaParent;
 
-    public GameObject label2005;
-    public GameObject label2006;
-    public GameObject label2007;
-    public GameObject label2008;
-    public GameObject label2009;
-    public GameObject label2010;
-    public GameObject label2011;
-    public GameObject label2012;
-    public GameObject label2013;
-    public GameObject label2014;
-    public GameObject label2015;
-
-    public GameObject bottom2005;
-    public GameObject bottom2006;
-    public GameObject bottom2007;
-    public GameObject bottom2008;
-    public GameObject bottom2009;
-    public GameObject bottom2010;
-    public GameObject bottom2011;
-    public GameObject bottom2012;
-    public GameObject bottom2013;
-    public GameObject bottom2014;
-    public GameObject bottom2015;
-
-
     void Start () {
 
 		Load (data_file); // Using CSV data dragged into the Inspector
@@ -55,8 +30,7 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2015").BornNorthAm) / 10000; // Change year + origin continent; dividing by 10,000 gives us clean numbers
 			StartCoroutine ("generateSpheres"); // Generate spheres sequentially based on numberOfObjects value
 			print ("2015 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2015").BornNorthAm) / 10000) + " * 10,000"); // Check if these values match with CSV 
-            intro.SetActive(false); // Set the intor message to inactive when you hit any year 
-            color2015(); 
+            
 			EventSequencer.Instance.yearSelected = 2015;
         } 
 		else if (Button.ButtonDown && buttonYear == 2014)
@@ -65,8 +39,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2014").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2014 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2014").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2014();
+            
+            
 			EventSequencer.Instance.yearSelected = 2014;
         }
 		else if (Button.ButtonDown && buttonYear == 2013)
@@ -75,8 +49,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2013").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2013 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2013").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2013();
+           
+           
 			EventSequencer.Instance.yearSelected = 2013;
         }
 		else if (Button.ButtonDown && buttonYear == 2012)
@@ -85,8 +59,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2012").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2012 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2012").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2012();
+            
+            
 			EventSequencer.Instance.yearSelected = 2012;
         }
 		else if (Button.ButtonDown && buttonYear == 2011)
@@ -95,8 +69,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2011").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2011 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2011").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2011();
+          
+            
 			EventSequencer.Instance.yearSelected = 2011;
         }
 		else if (Button.ButtonDown && buttonYear == 2010)
@@ -105,8 +79,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2010").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2010 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2010").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2010();
+           
+           
 			EventSequencer.Instance.yearSelected = 2010;
         }
 		else if (Button.ButtonDown && buttonYear == 2009)
@@ -115,8 +89,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2009").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2009 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2009").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2009();
+            
+           
 			EventSequencer.Instance.yearSelected = 2009;
         }
 		else if (Button.ButtonDown && buttonYear == 2008)
@@ -125,8 +99,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2008").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2008 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2008").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2008();
+          
+          
 			EventSequencer.Instance.yearSelected = 2008;
         }
 		else if (Button.ButtonDown && buttonYear == 2007)
@@ -135,8 +109,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2007").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2007 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2007").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2007();
+            
+            
 			EventSequencer.Instance.yearSelected = 2007;
         }
 		else if (Button.ButtonDown && buttonYear == 2006)
@@ -145,8 +119,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2006").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2006 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2006").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2006();
+          
+            
 			EventSequencer.Instance.yearSelected = 2006;
         }
 		else if (Button.ButtonDown && buttonYear == 2005){ // If the button is down, and 2005 is typed in the Inspector, generate 2005 North American data
@@ -154,8 +128,8 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2005").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2005 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2005").BornNorthAm) / 10000) + " * 10,000");
-            intro.SetActive(false);
-            color2005();
+           
+   
 			EventSequencer.Instance.yearSelected = 2005;
         }
 		else {
@@ -326,282 +300,6 @@ public class a_NorthAmerica : MonoBehaviour {
 	{
 		return rowList.FindAll(x => x.OlderThan85 == find);
 	}
-
-    void color2015() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); //
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255); 
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2014() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2013() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255); 
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2012() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2011() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2010() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2009() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2008() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2007() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2006() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-    }
-    void color2005() {
-        label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        label2005.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-
-        bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
-        bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(82, 144, 255, 255); // 
-    }
 
     IEnumerator  generateSpheres () {
 
