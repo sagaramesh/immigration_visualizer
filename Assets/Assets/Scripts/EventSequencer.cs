@@ -46,6 +46,14 @@ public class EventSequencer : MonoBehaviour {
     public GameObject bottom2006;
     public GameObject bottom2005;
 
+	public GameObject worldmap_all;
+	public GameObject worldmap_africa;
+	public GameObject worldmap_europe;
+	public GameObject worldmap_asia;
+	public GameObject worldmap_northamerica;
+	public GameObject worldmap_latinamerica;
+	public GameObject worldmap_oceania;
+
     // Use this for initialization
     void Awake(){
 		Instance = this;
@@ -74,6 +82,7 @@ public class EventSequencer : MonoBehaviour {
 		print ("Region selected " + regionSelected);
 
         ColorYears();
+		ActivateMaps ();
 
 		Year2005 ();
 		Year2006 ();
@@ -89,11 +98,95 @@ public class EventSequencer : MonoBehaviour {
 
 	}
 
-    // For each year's data, two main cases for each region. Either the year has been hit with show all selected, 
-    // or the year has been hit with one of the regions selected. Cover all bases for every year with this in mind.
+	// ACTIVATE AND SWITCH BETWEEN WORLD MAPS 
 
+	void ActivateMaps() {
 
-    void ColorYears() {
+		if (regionSelected == 1) { // AFRICA
+			
+			worldmap_africa.SetActive (true);
+			worldmap_europe.SetActive (false);
+			worldmap_asia.SetActive (false);
+			worldmap_latinamerica.SetActive (false);
+			worldmap_oceania.SetActive (false);
+			worldmap_northamerica.SetActive (false);
+			worldmap_all.SetActive (false);
+
+		} else if (regionSelected == 2) { // EUROPE
+			
+			worldmap_africa.SetActive (false);
+			worldmap_europe.SetActive (true);
+			worldmap_asia.SetActive (false);
+			worldmap_latinamerica.SetActive (false);
+			worldmap_oceania.SetActive (false);
+			worldmap_northamerica.SetActive (false);
+			worldmap_all.SetActive (false);
+
+		} else if (regionSelected == 3) { // ASIA
+
+			worldmap_africa.SetActive (false);
+			worldmap_europe.SetActive (false);
+			worldmap_asia.SetActive (true);
+			worldmap_latinamerica.SetActive (false);
+			worldmap_oceania.SetActive (false);
+			worldmap_northamerica.SetActive (false);
+			worldmap_all.SetActive (false);
+
+		} else if (regionSelected == 4) { // LATIN AMERICA
+
+			worldmap_africa.SetActive (false);
+			worldmap_europe.SetActive (false);
+			worldmap_asia.SetActive (false);
+			worldmap_latinamerica.SetActive (true);
+			worldmap_oceania.SetActive (false);
+			worldmap_northamerica.SetActive (false);
+			worldmap_all.SetActive (false);
+
+		} else if (regionSelected == 5) { // OCEANIA
+
+			worldmap_africa.SetActive (false);
+			worldmap_europe.SetActive (false);
+			worldmap_asia.SetActive (false);
+			worldmap_latinamerica.SetActive (false);
+			worldmap_oceania.SetActive (true);
+			worldmap_northamerica.SetActive (false);
+			worldmap_all.SetActive (false);
+
+		} else if (regionSelected == 6) { // NORTH AMERICA
+
+			worldmap_africa.SetActive (false);
+			worldmap_europe.SetActive (false);
+			worldmap_asia.SetActive (false);
+			worldmap_latinamerica.SetActive (false);
+			worldmap_oceania.SetActive (false);
+			worldmap_northamerica.SetActive (true);
+			worldmap_all.SetActive (false);
+
+		} else if (regionSelected == 7) { // ALL ACTIVE
+
+			worldmap_africa.SetActive (false);
+			worldmap_europe.SetActive (false);
+			worldmap_asia.SetActive (false);
+			worldmap_latinamerica.SetActive (false);
+			worldmap_oceania.SetActive (false);
+			worldmap_northamerica.SetActive (false);
+			worldmap_all.SetActive (true);
+
+		} else {
+
+			worldmap_africa.SetActive (false);
+			worldmap_europe.SetActive (false);
+			worldmap_asia.SetActive (false);
+			worldmap_latinamerica.SetActive (false);
+			worldmap_oceania.SetActive (false);
+			worldmap_northamerica.SetActive (false);
+			worldmap_all.SetActive (true);
+		}
+	}
+
+	// HIGHLIGHT SELECTED YEAR BUTTONS, STOP HIGHLIGHTING THOSE THAT ARE NOT SELECTED
+
+	void ColorYears() {
 
         // 2015
 
@@ -237,7 +330,11 @@ public class EventSequencer : MonoBehaviour {
         } 
     }
 
-    void Year2015 () {
+	// For each year's data, two main cases for each region. Either the year has been hit with show all selected, 
+	// or the year has been hit with one of the regions selected. Cover all bases for every year with this in mind.
+
+
+	void Year2015 () {
 
 		// NORTH AMERICA
 

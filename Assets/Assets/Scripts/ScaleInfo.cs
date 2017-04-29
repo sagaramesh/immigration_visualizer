@@ -11,8 +11,8 @@ public class ScaleInfo : MonoBehaviour {
 	public GameObject info_label;
 	public GameObject exit_label;
 
-    private Vector3 infoMaximized = new Vector3(0.1f, 0.1f, 0.1f);
-    private Vector3 infoMinimized = new Vector3(0f, 0f, 0f);
+    //private Vector3 infoMaximized = new Vector3(0.1f, 0.1f, 0.1f);
+    //private Vector3 infoMinimized = new Vector3(0f, 0f, 0f);
 
     float labelActive;
 
@@ -24,9 +24,12 @@ public class ScaleInfo : MonoBehaviour {
 
 	void Start(){
 
-        info_message.transform.localScale = infoMinimized;
+        //info_message.transform.localScale = infoMinimized;
 
-        info_label.SetActive(true);
+		info_message.GetComponent<ActivateInfo> ().enabled = false;
+		info_message.GetComponent<DeactivateInfo> ().enabled = true;
+
+		info_label.SetActive(true);
         exit_label.SetActive(false);
 
         labelActive = 1;
@@ -38,16 +41,24 @@ public class ScaleInfo : MonoBehaviour {
 
         if (Button.ButtonDown && labelActive == 1 || Input.GetKeyDown(KeyCode.I))
         {
-            StartCoroutine(InfoScaleUp(infoMaximized, 1.0f));
-            StartCoroutine("ActivateExitLabel");
+			info_message.GetComponent<ActivateInfo> ().enabled = true;
+			info_message.GetComponent<DeactivateInfo> ().enabled = false;
+			StartCoroutine("ActivateExitLabel");
+
+			//StartCoroutine(InfoScaleUp(infoMaximized, 1.0f));
+            //StartCoroutine("ActivateExitLabel");
             
             //info_message.transform.localScale = Vector3.Lerp(infoMinimized, infoMaximized, Time.time * smoothFactor + 0.2f);
             //StartCoroutine("ActivateExitLabel");
         }
         else if (Button.ButtonDown && labelActive == 2 || Input.GetKeyDown(KeyCode.E))
         {
-            StartCoroutine(InfoScaleDown(infoMinimized, 1.0f));
-            StartCoroutine("ActivateInfoLabel");
+			info_message.GetComponent<ActivateInfo> ().enabled = false;
+			info_message.GetComponent<DeactivateInfo> ().enabled = true;
+			StartCoroutine("ActivateInfoLabel");
+
+			//StartCoroutine(InfoScaleDown(infoMinimized, 1.0f));
+            //StartCoroutine("ActivateInfoLabel");
         }
         else {
         }
@@ -71,6 +82,8 @@ public class ScaleInfo : MonoBehaviour {
         labelActive = 2;
     }
 
+	/*
+
     IEnumerator InfoScaleUp(Vector3 info_scaleValue, float info_Time)
     {
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / info_Time)
@@ -92,4 +105,7 @@ public class ScaleInfo : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
     }
+
+*/
+
 }

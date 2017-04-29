@@ -8,13 +8,11 @@ public class ActivateExperience : MonoBehaviour {
 	public NVRButton Button;
 
 	public GameObject intro_message;
-
 	public GameObject ok_label;
 	public GameObject ok_label_bottom;
-
 	public GameObject world_map;
-
 	public GameObject ok_button;
+
 	public GameObject yearsPanel;
 	public GameObject regionsPanel;
 	public GameObject infoButton;
@@ -23,9 +21,13 @@ public class ActivateExperience : MonoBehaviour {
 
 	void Start () {
 
+		yearsPanel.SetActive (false);
+		regionsPanel.SetActive (false);
+		infoButton.SetActive (false);
+
 		yearsPanel.GetComponent<ActivateYears> ().enabled = false;
 		regionsPanel.GetComponent<ActivateRegions> ().enabled = false;
-		infoButton.GetComponent<ActivateInfo> ().enabled = false;
+		infoButton.GetComponent<ActivateInfoButton> ().enabled = false;
 		world_map.GetComponent<ActivateMap> ().enabled = false;
 		
 	}
@@ -34,12 +36,16 @@ public class ActivateExperience : MonoBehaviour {
 
 		if (Button.ButtonDown || Input.GetKeyDown (KeyCode.S)) {
 
-            EventSequencer.Instance.yearSelected = 0;
+			yearsPanel.SetActive (true);
+			regionsPanel.SetActive (true);
+			infoButton.SetActive (true);
+
+			EventSequencer.Instance.yearSelected = 0;
             EventSequencer.Instance.regionSelected = 7;
 
             yearsPanel.GetComponent<ActivateYears> ().enabled = true;
 			regionsPanel.GetComponent<ActivateRegions> ().enabled = true;
-			infoButton.GetComponent<ActivateInfo> ().enabled = true;
+			infoButton.GetComponent<ActivateInfoButton> ().enabled = true;
 			world_map.GetComponent<ActivateMap> ().enabled = true;
 
 			StartCoroutine (IntroFadeOut(0.0f, 1.0f));

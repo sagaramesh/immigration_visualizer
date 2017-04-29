@@ -4,7 +4,7 @@ using System.Collections;
 public class ActivateMap : MonoBehaviour {
 
 	public GameObject map;
-	private Vector3 mapFinalScale = new Vector3 (0.13f, 0.13f, 0.13f);
+	private Vector3 mapFinalScale = new Vector3 (1f, 1f, 1f);
 	private float smoothFactor = 2f;
 
 	void Start () {
