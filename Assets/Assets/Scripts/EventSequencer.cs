@@ -333,7 +333,6 @@ public class EventSequencer : MonoBehaviour {
 	// For each year's data, two main cases for each region. Either the year has been hit with show all selected, 
 	// or the year has been hit with one of the regions selected. Cover all bases for every year with this in mind.
 
-
 	void Year2015 () {
 
 		// NORTH AMERICA
@@ -348,6 +347,8 @@ public class EventSequencer : MonoBehaviour {
 			d_Europe.europeParent.SetActive (false);
 			e_Asia.asiaParent.SetActive (false);
 			f_Oceania.oceaniaParent.SetActive (false);
+
+			//a_NorthAmerica.northAmericaParent.transform.eulerAngles = Vector3.Lerp (startRotation, endRotation, Time.deltaTime * smoothFactor + 0.2f);
 		}
 		else {	
 			// No selected year

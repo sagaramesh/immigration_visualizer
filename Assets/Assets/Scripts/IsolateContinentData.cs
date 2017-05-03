@@ -22,13 +22,14 @@ public class IsolateContinentData : MonoBehaviour {
     public GameObject oceaniaBottom;
     public GameObject northAmericaBottom;
 
+	public AudioSource africaSource;
+	public AudioClip africaClip;
+
 
 
     // Use this for initialization
     void Start () {
 		GameObject scriptContainer = GameObject.Find("ScriptContainer"); 
-
-
 
 		/*a_NorthAmerica a = scriptContainer.GetComponent<a_NorthAmerica>();
 		b_LatinAmerica b = scriptContainer.GetComponent<b_LatinAmerica>();
@@ -42,6 +43,9 @@ public class IsolateContinentData : MonoBehaviour {
 		if (Button.ButtonDown && continentNumber == 1) {
 			//IsolateAfrica ();
 			EventSequencer.Instance.regionSelected = 1;
+
+			africaSource.clip = africaClip;
+			africaSource.Play();
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
