@@ -11,6 +11,12 @@ public class ScaleInfo : MonoBehaviour {
 	public GameObject info_label;
 	public GameObject exit_label;
 
+    public AudioSource info;
+    public AudioClip infoClip;
+
+    public AudioSource exit;
+    public AudioClip exitClip;
+
     //private Vector3 infoMaximized = new Vector3(0.1f, 0.1f, 0.1f);
     //private Vector3 infoMinimized = new Vector3(0f, 0f, 0f);
 
@@ -45,9 +51,12 @@ public class ScaleInfo : MonoBehaviour {
 			info_message.GetComponent<DeactivateInfo> ().enabled = false;
 			StartCoroutine("ActivateExitLabel");
 
-			//StartCoroutine(InfoScaleUp(infoMaximized, 1.0f));
+            info.clip = infoClip;
+            info.Play();
+
+            //StartCoroutine(InfoScaleUp(infoMaximized, 1.0f));
             //StartCoroutine("ActivateExitLabel");
-            
+
             //info_message.transform.localScale = Vector3.Lerp(infoMinimized, infoMaximized, Time.time * smoothFactor + 0.2f);
             //StartCoroutine("ActivateExitLabel");
         }
@@ -57,7 +66,10 @@ public class ScaleInfo : MonoBehaviour {
 			info_message.GetComponent<DeactivateInfo> ().enabled = true;
 			StartCoroutine("ActivateInfoLabel");
 
-			//StartCoroutine(InfoScaleDown(infoMinimized, 1.0f));
+            exit.clip = exitClip;
+            exit.Play();
+
+            //StartCoroutine(InfoScaleDown(infoMinimized, 1.0f));
             //StartCoroutine("ActivateInfoLabel");
         }
         else {

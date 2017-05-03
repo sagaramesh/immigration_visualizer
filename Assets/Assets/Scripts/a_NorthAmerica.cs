@@ -7,8 +7,7 @@ using NewtonVR;
 
 public class a_NorthAmerica : MonoBehaviour {
 
-	public GameObject continent_group;
-    public GameObject intro; 
+	public GameObject continent_group; 
 	public TextAsset data_file;
     public NVRButton Button;
     
@@ -39,7 +38,6 @@ public class a_NorthAmerica : MonoBehaviour {
 			numberOfObjects = Convert.ToInt32 (Find_Year ("2014").BornNorthAm) / 10000;
 			StartCoroutine ("generateSpheres"); 
 			print ("2014 North American Immigrants: " + (Convert.ToInt32 (Find_Year ("2014").BornNorthAm) / 10000) + " * 10,000");
-            
             
 			EventSequencer.Instance.yearSelected = 2014;
         }

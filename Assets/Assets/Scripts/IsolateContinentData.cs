@@ -24,6 +24,18 @@ public class IsolateContinentData : MonoBehaviour {
 
 	public AudioSource africaSource;
 	public AudioClip africaClip;
+    public AudioSource europeSource;
+    public AudioClip europeClip;
+    public AudioSource asiaSource;
+    public AudioClip asiaClip;
+    public AudioSource latinAmericaSource;
+    public AudioClip latinAmericaClip;
+    public AudioSource oceaniaSource;
+    public AudioClip oceaniaClip;
+    public AudioSource northAmericaSource;
+    public AudioClip northAmericaClip;
+    public AudioSource showAllSource;
+    public AudioClip showAllClip; 
 
 
 
@@ -66,6 +78,9 @@ public class IsolateContinentData : MonoBehaviour {
 			//IsolateEurope ();
 			EventSequencer.Instance.regionSelected = 2;
 
+            europeSource.clip = europeClip;
+            europeSource.Play();
+
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             africaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -84,6 +99,9 @@ public class IsolateContinentData : MonoBehaviour {
         {
 			//IsolateAsia ();
 			EventSequencer.Instance.regionSelected = 3;
+
+            asiaSource.clip = asiaClip;
+            asiaSource.Play();
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -104,6 +122,9 @@ public class IsolateContinentData : MonoBehaviour {
 			//IsolateLatinAmerica ();
 			EventSequencer.Instance.regionSelected = 4;
 
+            latinAmericaSource.clip = latinAmericaClip;
+            latinAmericaSource.Play();
+
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(77, 211, 255, 255); // Modify
             africaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -122,6 +143,9 @@ public class IsolateContinentData : MonoBehaviour {
         {
 			//IsolateOceania ();
 			EventSequencer.Instance.regionSelected = 5;
+
+            oceaniaSource.clip = oceaniaClip;
+            oceaniaSource.Play();
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -142,6 +166,9 @@ public class IsolateContinentData : MonoBehaviour {
 			//IsolateNorthAmerica ();
 			EventSequencer.Instance.regionSelected = 6;
 
+            northAmericaSource.clip = northAmericaClip;
+            northAmericaSource.Play();
+
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(241, 255, 0, 255); // Modify
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             africaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
@@ -160,6 +187,9 @@ public class IsolateContinentData : MonoBehaviour {
         {
 			//IsolateNothing ();
 			EventSequencer.Instance.regionSelected = 7;
+
+            showAllSource.clip = showAllClip;
+            showAllSource.Play();
 
             northAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             latinAmericaLabel.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);

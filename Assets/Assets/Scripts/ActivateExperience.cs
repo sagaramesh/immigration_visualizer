@@ -19,7 +19,13 @@ public class ActivateExperience : MonoBehaviour {
 
 	public GameObject sphere;
 
-	void Start () {
+    public AudioSource ok;
+    public AudioClip okClip;
+
+    public AudioSource start;
+    public AudioClip startClip;
+
+    void Start () {
 
 		yearsPanel.SetActive (false);
 		regionsPanel.SetActive (false);
@@ -36,7 +42,13 @@ public class ActivateExperience : MonoBehaviour {
 
 		if (Button.ButtonDown || Input.GetKeyDown (KeyCode.S)) {
 
-			yearsPanel.SetActive (true);
+            ok.clip = okClip;
+            ok.Play();
+
+            start.clip = startClip;
+            start.Play();
+
+            yearsPanel.SetActive (true);
 			regionsPanel.SetActive (true);
 			infoButton.SetActive (true);
 

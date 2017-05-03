@@ -54,6 +54,32 @@ public class EventSequencer : MonoBehaviour {
 	public GameObject worldmap_latinamerica;
 	public GameObject worldmap_oceania;
 
+    public AudioSource year2015;
+    public AudioClip year2015Clip;
+    public AudioSource year2014;
+    public AudioClip year2014Clip;
+    public AudioSource year2013;
+    public AudioClip year2013Clip;
+    public AudioSource year2012;
+    public AudioClip year2012Clip;
+    public AudioSource year2011;
+    public AudioClip year2011Clip;
+    public AudioSource year2010;
+    public AudioClip year2010Clip;
+    public AudioSource year2009;
+    public AudioClip year2009Clip;
+    public AudioSource year2008;
+    public AudioClip year2008Clip;
+    public AudioSource year2007;
+    public AudioClip year2007Clip;
+    public AudioSource year2006;
+    public AudioClip year2006Clip;
+    public AudioSource year2005;
+    public AudioClip year2005Clip;
+
+    //public AudioSource showAll;
+    //public AudioClip showAllClip;
+
     // Use this for initialization
     void Awake(){
 		Instance = this;
@@ -83,6 +109,7 @@ public class EventSequencer : MonoBehaviour {
 
         ColorYears();
 		ActivateMaps ();
+        //BloomSound();
 
 		Year2005 ();
 		Year2006 ();
@@ -98,9 +125,75 @@ public class EventSequencer : MonoBehaviour {
 
 	}
 
-	// ACTIVATE AND SWITCH BETWEEN WORLD MAPS 
+    // ACTIVATE AND SWITCH BETWEEN WORLD MAPS
 
-	void ActivateMaps() {
+    /*
+    
+    void BloomSound() {
+        if (yearSelected == 2015 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2014 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2013 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2012 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2011 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2010 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2009 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2008 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2007 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2006 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else if (yearSelected == 2005 && regionSelected == 7)
+        {
+            showAll.clip = showAllClip;
+            showAll.Play();
+        }
+        else {
+
+            // Do nothing
+        }
+    } 
+
+    */
+
+    void ActivateMaps() {
 
 		if (regionSelected == 1) { // AFRICA
 			
@@ -187,16 +280,20 @@ public class EventSequencer : MonoBehaviour {
 	// HIGHLIGHT SELECTED YEAR BUTTONS, STOP HIGHLIGHTING THOSE THAT ARE NOT SELECTED
 
 	void ColorYears() {
-
+        
         // 2015
 
         if (yearSelected == 2015) {
             label2015.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2015.clip = year2015Clip;
+            year2015.Play();
         }
         else {
             label2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2015.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
         }
 
         // 2014
@@ -205,11 +302,15 @@ public class EventSequencer : MonoBehaviour {
         {
             label2014.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2014.clip = year2014Clip;
+            year2014.Play();
         }
         else
         {
             label2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2014.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
         }
 
         // 2013
@@ -218,11 +319,15 @@ public class EventSequencer : MonoBehaviour {
         {
             label2013.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2013.clip = year2013Clip;
+            year2013.Play();
         }
         else
         {
             label2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2013.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
         }
 
         // 2012
@@ -231,11 +336,15 @@ public class EventSequencer : MonoBehaviour {
         {
             label2012.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2012.clip = year2012Clip;
+            year2012.Play();
         }
         else
         {
             label2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2012.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
         }
 
         // 2011
@@ -244,11 +353,16 @@ public class EventSequencer : MonoBehaviour {
         {
             label2011.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2011.clip = year2011Clip;
+            year2011.Play();
         }
         else
         {
             label2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2011.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
+
         }
 
         // 2010
@@ -257,11 +371,15 @@ public class EventSequencer : MonoBehaviour {
         {
             label2010.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2010.clip = year2010Clip;
+            year2010.Play();
         }
         else
         {
             label2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2010.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
         }
 
         // 2009
@@ -270,11 +388,15 @@ public class EventSequencer : MonoBehaviour {
         {
             label2009.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2009.clip = year2009Clip;
+            year2009.Play();
         }
         else
         {
             label2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2009.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
         }
 
         // 2008
@@ -283,11 +405,15 @@ public class EventSequencer : MonoBehaviour {
         {
             label2008.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2008.clip = year2008Clip;
+            year2008.Play();
         }
         else
         {
             label2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2008.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
         }
 
         // 2007
@@ -296,11 +422,15 @@ public class EventSequencer : MonoBehaviour {
         {
             label2007.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2007.clip = year2007Clip;
+            year2007.Play();
         }
         else
         {
             label2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2007.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
         }
 
         // 2006
@@ -309,11 +439,15 @@ public class EventSequencer : MonoBehaviour {
         {
             label2006.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2006.clip = year2006Clip;
+            year2006.Play();
         }
         else
         {
             label2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
             bottom2006.GetComponent<SpriteRenderer>().material.color = new Color32(255, 255, 255, 255);
+
         }
 
         // 2005
@@ -322,6 +456,9 @@ public class EventSequencer : MonoBehaviour {
         {
             label2005.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
             bottom2005.GetComponent<SpriteRenderer>().material.color = new Color32(90, 228, 255, 255);
+
+            year2005.clip = year2005Clip;
+            year2005.Play();
         }
         else
         {
@@ -339,7 +476,7 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2015 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+        } 
 		else if (yearSelected == 2015 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -446,7 +583,8 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2014 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+
+        } 
 		else if (yearSelected == 2014 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -551,7 +689,8 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2013 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+
+        } 
 		else if (yearSelected == 2013 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -656,7 +795,7 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2012 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+        } 
 		else if (yearSelected == 2012 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -761,7 +900,8 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2011 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+
+        } 
 		else if (yearSelected == 2011 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -866,7 +1006,8 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2010 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+
+        } 
 		else if (yearSelected == 2010 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -971,7 +1112,8 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2009 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+
+        } 
 		else if (yearSelected == 2009 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -1076,7 +1218,8 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2008 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+
+        } 
 		else if (yearSelected == 2008 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -1181,7 +1324,8 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2007 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+
+        } 
 		else if (yearSelected == 2007 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -1286,7 +1430,8 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2006 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+
+        } 
 		else if (yearSelected == 2006 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
@@ -1391,7 +1536,8 @@ public class EventSequencer : MonoBehaviour {
 
 		if (yearSelected == 2005 && regionSelected == 7) {
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Change region that's set active here
-		} 
+
+        } 
 		else if (yearSelected == 2005 && regionSelected == 6){ // Change value of region selected
 			a_NorthAmerica.northAmericaParent.SetActive (true); // Set active, disable others
 			b_LatinAmerica.latinAmericaParent.SetActive (false);
