@@ -4,6 +4,6 @@ Provenance is an interactive visualization of immigration data from 2005 - 2015,
 
 The purpose of this visualization is to present the grandiose and colorful nature of immigration in a way that allows users to compare and interact with the data.
 
-Designed and Developed by Sagar Ramesh
+Designed and Developed by Sagar Ramesh,
 Sound Design by Yimin Zhang 
 
