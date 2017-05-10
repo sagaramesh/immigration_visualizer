@@ -6,3 +6,7 @@ The purpose of this visualization is to present the colorful and grandiose natur
 
 For a full walkthrough of the project, see: https://youtu.be/j1_XAl0N7Pg 
 
+_____
+
+Designed / Developed by Sagar Ramesh, Music / Sound Design by Yimin Zhang 
+
